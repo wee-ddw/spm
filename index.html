@@ -519,6 +519,254 @@
       .status.show {
         opacity: 1;
       }
+      .dashboard {
+        min-height: min(760px, calc(100vh - 78px));
+        padding: clamp(12px, 1.4vw, 18px);
+        display: grid;
+        grid-template-columns: minmax(220px, 250px) 1fr;
+        gap: clamp(12px, 1.4vw, 18px);
+      }
+      .dash-side {
+        border: 1px solid #dde3ec;
+        border-radius: 18px;
+        background: #f5f7fb;
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+      }
+      .dash-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 700;
+        color: #1e395f;
+      }
+      .dash-brand .tile-icon {
+        width: 52px;
+        height: 52px;
+        border-radius: 12px;
+        background: #173965;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.24);
+      }
+      .dash-group {
+        margin-top: 16px;
+      }
+      .dash-label {
+        margin: 0 0 8px;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 0.24em;
+        color: #7b818c;
+      }
+      .side-btn {
+        width: 100%;
+        margin-bottom: 8px;
+        border: 1px solid #dbe1ea;
+        border-radius: 10px;
+        background: #fff;
+        color: #1f3555;
+        padding: 10px 12px;
+        text-align: left;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s, background 0.2s, color 0.2s;
+      }
+      .side-btn:hover,
+      .chip-btn:hover,
+      .util-btn:hover,
+      .mini-btn:hover,
+      .pager-btn:hover,
+      .logout-btn:hover,
+      .logout-main:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 8px 18px rgba(18, 48, 90, 0.14);
+      }
+      .side-btn:active,
+      .chip-btn:active,
+      .util-btn:active,
+      .mini-btn:active,
+      .pager-btn:active,
+      .logout-btn:active,
+      .logout-main:active {
+        transform: translateY(1px);
+      }
+      .side-btn:focus-visible,
+      .chip-btn:focus-visible,
+      .util-btn:focus-visible,
+      .mini-btn:focus-visible,
+      .pager-btn:focus-visible,
+      .logout-btn:focus-visible,
+      .logout-main:focus-visible {
+        outline: 3px solid rgba(28, 78, 136, 0.22);
+        outline-offset: 2px;
+      }
+      .side-btn.active,
+      .chip-btn.active,
+      .mini-btn.active {
+        border-color: #1f568f;
+        background: linear-gradient(135deg, #315f96 0%, #1e4f86 100%);
+        color: #fff;
+      }
+      .dash-bottom {
+        margin-top: auto;
+      }
+      .logout-btn {
+        width: 100%;
+        border: 1px solid #1f568f;
+        border-radius: 10px;
+        background: linear-gradient(135deg, #315f96 0%, #1f568f 100%);
+        color: #fff;
+        font-weight: 600;
+        padding: 10px 12px;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s, filter 0.2s;
+      }
+      .logout-btn:hover,
+      .logout-main:hover {
+        filter: brightness(1.06);
+      }
+      .dash-main {
+        border: 1px solid #dde3ec;
+        border-radius: 18px;
+        background: #f8faff;
+        padding: clamp(12px, 1.5vw, 18px);
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+      }
+      .dash-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .dash-search {
+        flex: 1;
+        min-width: 220px;
+        height: 42px;
+        border-radius: 999px;
+        border: 1px solid #d7dee9;
+        background: #fff;
+        padding: 0 14px;
+        font: inherit;
+        color: #2f4563;
+      }
+      .dash-search:focus {
+        outline: none;
+        border-color: #1e4f86;
+        box-shadow: 0 0 0 3px rgba(30, 79, 134, 0.2);
+      }
+      .dash-user {
+        display: inline-flex;
+        gap: 8px;
+        align-items: center;
+      }
+      .chip-btn,
+      .util-btn,
+      .mini-btn,
+      .pager-btn,
+      .logout-main {
+        border: 1px solid #d6deea;
+        border-radius: 9px;
+        background: #fff;
+        color: #27415f;
+        font-weight: 600;
+        font-size: 12px;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s, background 0.2s, color 0.2s, filter 0.2s;
+      }
+      .chip-btn,
+      .util-btn {
+        padding: 8px 10px;
+      }
+      .dash-card {
+        border: 1px solid #dfe6f0;
+        border-radius: 12px;
+        background: #fff;
+        padding: 12px;
+      }
+      .dash-title {
+        margin: 0 0 10px;
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        color: #547196;
+      }
+      .pipeline {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(120px, 1fr));
+        gap: 10px;
+      }
+      .mini-btn {
+        padding: 10px;
+        text-align: left;
+      }
+      .mini-btn .num {
+        display: block;
+        margin-top: 6px;
+        font-size: 26px;
+        line-height: 1;
+        color: #173e6f;
+        font-weight: 700;
+      }
+      .mini-btn.active .num {
+        color: #fff;
+      }
+      .dash-actions {
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-end;
+        gap: 8px;
+      }
+      .table-wrap {
+        border: 1px solid #dce3ee;
+        border-radius: 12px;
+        background: #fff;
+        overflow: auto;
+      }
+      .case-table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 760px;
+      }
+      .case-table th,
+      .case-table td {
+        border-bottom: 1px solid #edf1f7;
+        padding: 11px 10px;
+        font-size: 12px;
+        text-align: left;
+        color: #345172;
+      }
+      .case-table th {
+        background: #f7faff;
+        color: #557395;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+      }
+      .case-table tr:last-child td {
+        border-bottom: 0;
+      }
+      .dash-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 12px;
+      }
+      .pager {
+        display: inline-flex;
+        gap: 6px;
+      }
+      .pager-btn {
+        width: 30px;
+        height: 30px;
+      }
+      .logout-main {
+        padding: 8px 12px;
+        border-color: #1f568f;
+        color: #1f568f;
+      }
       @keyframes spin {
         to {
           transform: rotate(360deg);
@@ -593,6 +841,9 @@
         }
         .mod {
           min-height: 186px;
+        }
+        .dashboard {
+          grid-template-columns: 1fr;
         }
       }
     </style>
@@ -718,6 +969,116 @@
           <p class="status" id="status" aria-live="polite"></p>
         </div>
       </section>
+
+      <section class="screen" id="dashboard" aria-label="Credit card dashboard screen">
+        <div class="panel dashboard">
+          <aside class="dash-side">
+            <div class="dash-brand">
+              <div class="tile-icon" aria-hidden="true"></div>
+              <div id="dashBankTitle">BPI - Credit Card</div>
+            </div>
+            <div class="dash-group">
+              <p class="dash-label">WORKSPACE</p>
+              <button class="side-btn active" id="workspaceDashboardBtn" type="button" data-side-group="workspace">Dashboard</button>
+              <button class="side-btn" type="button" data-side-group="workspace">Calendar</button>
+            </div>
+            <div class="dash-group">
+              <p class="dash-label">CASE TYPE</p>
+              <button class="side-btn active" id="caseTypeSmallClaimsBtn" type="button" data-side-group="caseType">Small Claims</button>
+              <button class="side-btn" type="button" data-side-group="caseType">Regular</button>
+            </div>
+            <div class="dash-bottom">
+              <button class="logout-btn" id="sideLogout" type="button">Logout</button>
+            </div>
+          </aside>
+
+          <div class="dash-main">
+            <header class="dash-top">
+              <input class="dash-search" type="search" placeholder="Search cases, accounts, documents" />
+              <div class="dash-user">
+                <button class="chip-btn active" id="dashBankChip" type="button">BPI - credit card</button>
+                <button class="chip-btn" type="button">Admin</button>
+                <button class="chip-btn" type="button">Alerts</button>
+              </div>
+            </header>
+
+            <section class="dash-card">
+              <p class="dash-title">PIPELINE - PRE-LEGAL CASE WORKFLOW</p>
+              <div class="pipeline">
+                <button class="mini-btn active" type="button"><span>All</span><span class="num">39</span></button>
+                <button class="mini-btn" type="button"><span>Case Qualification</span><span class="num">38</span></button>
+                <button class="mini-btn" type="button"><span>Recommended for Filing</span><span class="num">1</span></button>
+                <button class="mini-btn" type="button"><span>Return From Filing</span><span class="num">0</span></button>
+                <button class="mini-btn" type="button"><span>Deferred</span><span class="num">0</span></button>
+                <button class="mini-btn" type="button"><span>Endorse</span><span class="num">0</span></button>
+              </div>
+              <div class="dash-actions">
+                <button class="util-btn" type="button">Show filters</button>
+                <button class="util-btn" type="button">Export CSV</button>
+              </div>
+            </section>
+
+            <section class="table-wrap">
+              <table class="case-table">
+                <thead>
+                  <tr>
+                    <th>Account No.</th>
+                    <th>Name</th>
+                    <th>Balance</th>
+                    <th>Current Status</th>
+                    <th>Reason</th>
+                    <th>Aging</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>0201003093049762</td>
+                    <td>Maya Villanueva Lopez</td>
+                    <td>P 40,440.00</td>
+                    <td>Not Qualified for Filing</td>
+                    <td>Whereabouts unknown</td>
+                    <td>0d</td>
+                  </tr>
+                  <tr>
+                    <td>0201002333726560</td>
+                    <td>Aaron Morales Martinez</td>
+                    <td>P 561,429.00</td>
+                    <td>Pending</td>
+                    <td>-</td>
+                    <td>0d</td>
+                  </tr>
+                  <tr>
+                    <td>0201002599114497</td>
+                    <td>Riley Reyes Garcia</td>
+                    <td>P 277,517.00</td>
+                    <td>Not Qualified for Filing</td>
+                    <td>Whereabouts unknown</td>
+                    <td>0d</td>
+                  </tr>
+                  <tr>
+                    <td>0201006500445148</td>
+                    <td>Owen Garcia Cruz</td>
+                    <td>P 128,537.00</td>
+                    <td>No Field Visit</td>
+                    <td>-</td>
+                    <td>1d</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+
+            <footer class="dash-footer">
+              <small>Page 1 of 8 - 39 records</small>
+              <div class="pager">
+                <button class="pager-btn active" type="button">1</button>
+                <button class="pager-btn" type="button">2</button>
+                <button class="pager-btn" type="button">3</button>
+                <button class="pager-btn" type="button">4</button>
+              </div>
+            </footer>
+          </div>
+        </div>
+      </section>
     </div>
 
     <script>
@@ -727,6 +1088,7 @@
           loading: document.getElementById("loading"),
           bank: document.getElementById("bank"),
           module: document.getElementById("module"),
+          dashboard: document.getElementById("dashboard"),
         };
         const form = document.getElementById("loginForm");
         const bankGrid = document.getElementById("bankGrid");
@@ -736,6 +1098,15 @@
         const bankConfirm = document.getElementById("bankConfirm");
         const moduleConfirm = document.getElementById("moduleConfirm");
         const status = document.getElementById("status");
+        const sideLogout = document.getElementById("sideLogout");
+        const dashBankTitle = document.getElementById("dashBankTitle");
+        const dashBankChip = document.getElementById("dashBankChip");
+        const workspaceDashboardBtn = document.getElementById("workspaceDashboardBtn");
+        const caseTypeSmallClaimsBtn = document.getElementById("caseTypeSmallClaimsBtn");
+        const sideButtons = [...document.querySelectorAll(".side-btn")];
+        const chipButtons = [...document.querySelectorAll(".chip-btn")];
+        const miniButtons = [...document.querySelectorAll(".mini-btn")];
+        const pagerButtons = [...document.querySelectorAll(".pager-btn")];
 
         let selectedBank = "";
         let selectedModule = "";
@@ -745,6 +1116,13 @@
         const show = (id) => {
           Object.values(screens).forEach((s) => s.classList.remove("active"));
           screens[id].classList.add("active");
+        };
+
+        const showDashboard = () => {
+          const bankName = selectedBank || "BPI";
+          dashBankTitle.textContent = bankName + " - Credit Card";
+          dashBankChip.textContent = bankName + " - credit card";
+          show("dashboard");
         };
 
         const paintSelection = (cards, selected, key) => {
@@ -769,6 +1147,23 @@
           moduleConfirm.classList.toggle("on", Boolean(selectedModule));
         };
 
+        const activateOne = (buttons, hit) => {
+          buttons.forEach((btn) => btn.classList.toggle("active", btn === hit));
+        };
+
+        const activateSideGroup = (group, hit) => {
+          const groupButtons = sideButtons.filter((btn) => btn.dataset.sideGroup === group);
+          groupButtons.forEach((btn) => btn.classList.toggle("active", btn === hit));
+        };
+
+        const resetDashboardControls = () => {
+          activateSideGroup("workspace", workspaceDashboardBtn);
+          activateSideGroup("caseType", caseTypeSmallClaimsBtn);
+          activateOne(chipButtons, dashBankChip);
+          if (miniButtons[0]) activateOne(miniButtons, miniButtons[0]);
+          if (pagerButtons[0]) activateOne(pagerButtons, pagerButtons[0]);
+        };
+
         const reset = () => {
           clearTimeout(bankAutoTimer);
           selectedBank = "";
@@ -777,6 +1172,7 @@
           status.classList.remove("show");
           updateBanks();
           updateModules();
+          resetDashboardControls();
         };
 
         form.addEventListener("submit", (e) => {
@@ -807,17 +1203,52 @@
             selectedModule = card.dataset.module || "";
             status.classList.remove("show");
             updateModules();
+            if (selectedModule === "Credit Card") {
+              showDashboard();
+            }
           }),
         );
 
         moduleConfirm.addEventListener("click", () => {
           if (!selectedBank || !selectedModule) return;
+          if (selectedModule === "Credit Card") {
+            showDashboard();
+            return;
+          }
           status.textContent = selectedBank + " - " + selectedModule + " selected.";
           status.classList.add("show");
         });
 
+        sideButtons.forEach((btn) =>
+          btn.addEventListener("click", () => {
+            activateSideGroup(btn.dataset.sideGroup, btn);
+          }),
+        );
+        chipButtons.forEach((btn) =>
+          btn.addEventListener("click", () => {
+            activateOne(chipButtons, btn);
+          }),
+        );
+        miniButtons.forEach((btn) =>
+          btn.addEventListener("click", () => {
+            activateOne(miniButtons, btn);
+          }),
+        );
+        pagerButtons.forEach((btn) =>
+          btn.addEventListener("click", () => {
+            activateOne(pagerButtons, btn);
+          }),
+        );
+
+        const logout = () => {
+          reset();
+          show("login");
+        };
+        sideLogout.addEventListener("click", logout);
+
         updateBanks();
         updateModules();
+        resetDashboardControls();
       })();
     </script>
   </body>
